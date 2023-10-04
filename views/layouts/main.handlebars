@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAKEBOOK</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+  <link rel="stylesheet" type="text/css" href="/css/style.css">
+</head>
+
+<body>
+
+  <section class="hero is-primary">
+    <div class="hero-body">
+      <div class="container has-text-centered">
+        <h1 class="title is-size-1 has-text-white">Welcome to Fakebook</h1>
+      </div>
+    </div>
+  </section>
+
+{{#if loggedIn}}
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="container">
+    <div class="navbar-brand">
+      <div class="navbar-start">
+        <a class="navbar-item" href="/create">
+          <button class="button is-primary is-outlined">Create a Post</button>
+        </a>
+      </div>
+      <div class="navbar-end">
+        <a class="navbar-item">
+          <button id="logout" class="button is-primary is-outlined">Logout</button>
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>
+{{/if}}
+
+
+
+  <div class="container">
+    {{{body}}}
+  </div>
+
+  {{#if loggedIn}}
+  <script src="/js/logout.js"></script>
+  {{/if}}
+</body>
+
+</html>

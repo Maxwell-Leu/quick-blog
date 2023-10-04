@@ -1,0 +1,26 @@
+  <a class="navbar-item" href="/">
+    <button class="button is-primary is-outlined">Home</button>
+  </a>
+<div id="placement">
+  <h2> Create Your New Account! </h2>
+  <div class="login-card" id="login-create">
+    <h2 class="page-title">New Account</h2>
+    <form class="form signup-form" action="/api/users" method="post">
+      <div class="form-group">
+        <input class="form-input" type="text" name="name" placeholder="New Username" required />
+      </div>
+      <div class="form-group">
+        <input class="form-input" type="text" name="email" placeholder="Email" required />
+      </div>
+      <div class="form-group">
+        <input class="form-input" type="password" name="password" placeholder="New Password" required />
+      </div>
+      <div class="form-group">
+        <button class="btn btn-primary" type="submit">Create New Account</button>
+      </div>
+      <div class="form-group">
+        <a href="/" class="btn btn-primary">Back to Homepage</a>
+      </div>
+    </form>
+  </div>
+</div>
