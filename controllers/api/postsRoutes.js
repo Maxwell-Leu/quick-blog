@@ -1,7 +1,6 @@
 const express = require('express');
 const router = express.Router();
 const { Post } = require('../../models');
-const createCommentsFromResponses = require('../../public/js/generate-comments');
 
 
 

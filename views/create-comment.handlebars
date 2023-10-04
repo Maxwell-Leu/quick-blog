@@ -1,0 +1,18 @@
+<!-- views/create2-comments.handlebars -->
+
+<div class="container">
+  <h1 class="title">Create a New Comments</h1>
+  <form action="/api/comments" method="post">
+    <div class="field">
+      <label class="label" for="body">Comment Content:</label>
+      <div class="control">
+        <textarea class="textarea" id="body" name="body" rows="4" required></textarea>
+      </div>
+    </div>
+    <div class="field">
+      <div class="control">
+        <button class="button is-primary" type="submit">Create Comment</button>
+      </div>
+    </div>
+  </form>
+</div>
