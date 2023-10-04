@@ -1,2 +1,2 @@
-DROP DATABASE IF EXISTS quickblog_db;
-CREATE DATABASE quickblog_db;
+DROP DATABASE IF EXISTS fakebook_db;
+CREATE DATABASE fakebook_db;

@@ -11,3 +11,4 @@ router.use("/posts", postsRoutes);
 router.use("/users", userRoutes);
 
 module.exports = router;
+

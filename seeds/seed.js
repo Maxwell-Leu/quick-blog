@@ -1,14 +1,17 @@
 //models
 const sequelize = require('../config/connection');
 const Users = require('../models/user')
-//const Posts = require('../models/post')
-//const Comments = require('../models/comment')
+const Bots = require('../models/bot')
+const Posts = require('../models/post')
+const Comments = require('../models/comment')
+const Responses = require('../models/response')
 
 //import seeds
+const botSeedsData = require('./botsData.json');
 const userSeeds = require('./userData.json');
 const postSeeds = require('./postsData.json');
 const commentSeeds = require('./commentsData.json');
-
+const responseSeeds = require('./responseData.json')
 const seedDatabase = async () => {
     //sync database
     await sequelize.sync({ force: true });
@@ -19,8 +22,13 @@ const seedDatabase = async () => {
         returning: true
     })
 
-/*
-    const newPosts = await Posts.bulkCreate(postSeeds, {
+    //Seeds bots
+    const newBots = await Bots.bulkCreate(botSeedsData, {
+        individualHooks: true,
+        returning: true
+    })
+
+    const newPosts = await Posts.bulkCreate(postSeeds,{
         individualHooks: true,
         returning: true
     })
@@ -34,7 +42,6 @@ const seedDatabase = async () => {
         individualHooks: true,
         returning: true
     })
-    */
 }
 
 seedDatabase();

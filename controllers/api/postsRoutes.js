@@ -29,7 +29,7 @@ router.post('/', async (req, res) => {
       created_by: req.session.user_id,
     });
 
-    await createCommentsFromResponses(newPost.id);
+    //await createCommentsFromResponses(newPost.id);
 
     // Respond with a success message
     res.redirect('/');
