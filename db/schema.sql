@@ -1,3 +1,2 @@
 DROP DATABASE IF EXISTS quickblog_db;
-DROP DATABASE IF EXISTS fackbook_db;
 CREATE DATABASE quickblog_db;

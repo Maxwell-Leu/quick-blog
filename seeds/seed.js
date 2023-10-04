@@ -1,17 +1,17 @@
 //models
 const sequelize = require('../config/connection');
 const Users = require('../models/user')
-const Bots = require('../models/bot')
+//const Bots = require('../models/bot')
 const Posts = require('../models/post')
 const Comments = require('../models/comment')
-const Responses = require('../models/response')
+//const Responses = require('../models/response')
 
 //import seeds
-const botSeedsData = require('./botsData.json');
+//const botSeedsData = require('./botsData.json');
 const userSeeds = require('./userData.json');
 const postSeeds = require('./postsData.json');
 const commentSeeds = require('./commentsData.json');
-const responseSeeds = require('./responseData.json')
+//const responseSeeds = require('./responseData.json')
 const seedDatabase = async () => {
     //sync database
     await sequelize.sync({ force: true });
